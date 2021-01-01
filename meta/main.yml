@@ -1,0 +1,25 @@
+galaxy_info:
+  role_name: git
+  author: Adrian Wyssmann
+  description: Role for simplified git repo handling
+  company: wyssmann.com
+  issue_tracker_url: https://github.com/papanito/ansible-role-git/issues
+  license: Apache
+  min_ansible_version: 2.7
+
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+
+  galaxy_tags:
+  - git
+
+dependencies:
+  - kewlfft.aur

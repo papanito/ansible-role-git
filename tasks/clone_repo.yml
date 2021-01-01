@@ -1,0 +1,19 @@
+- name: Set target directory
+  set_fact:
+    target_dir: "{{ item.value.dest | default(default_workspace) }}/{{ item.key }}"
+- name: Clone repo {{ item.key }}
+  git:
+    repo: "{{ item.value.repo }}"
+    dest: "{{ target_dir }}"
+    bare: "{{ item.value.bare | default(bare_default) | bool }}"
+    clone: "{{ item.value.clone | default(clone_default) | bool }}"
+    force: "{{ item.value.force | default(force_default) | bool }}"
+    recursive: "{{ item.value.recursive | default(recursive_default) | bool }}"
+    update: "{{ item.value.update | default(update_default) | bool }}"
+    remote: "{{ item.value.remote | default(remote_default) }}"
+- name: install dependencies
+  include_tasks: install_package.yml
+  loop: "{{ item.value.dependencies }}"
+  loop_control:
+    loop_var: package
+  when: item.value.dependencies is defined

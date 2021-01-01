@@ -1,0 +1,13 @@
+- debug:
+    msg: "{{ install_packages }}"
+- name: Install git package(s)
+  package: name={{ package }} state=latest # noqa 403
+  become: true
+  loop:
+    - git
+  loop_control:
+    loop_var: package
+  when: install_packages | bool
+- name: Clone git repo
+  include_tasks: clone_repo.yml
+  with_dict: "{{ git_repos }}"

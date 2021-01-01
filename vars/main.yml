@@ -1,0 +1,7 @@
+---
+bare_default: No
+clone_default: Yes
+force_default: No
+remote_default: "origin"
+recursive_default: Yes
+update_default: Yes

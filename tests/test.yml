@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+  remote_user: root
+  vars:
+    default_workspace: "~/Workspaces/tools"
+    git_repos:
+      social-analyzer:
+        repo: git@github.com:qeeqbox/social-analyzer.git
+      airgeddon:
+        repo: git@github.com:v1s1t0r1sh3r3/airgeddon.git
+        dependencies:
+          - { name: crunch, type: aur }
+          - aircrack-ng
+          - xterm
+          - ettercap
+          - pixiewps
+          - dhcp
+          - hostapd
+          - sslstrip
+          - hcxdumptool
+          - reaver
+          - hcxtools
+          - beef-project
+          - lighttpd
+          - openssl
+          - bettercap
+          - { name: asleap, type: aur }
+          - hashcat
+          - wireshark-cli
+          - mdk4
+          - bully
+          - { name: hostapd-wpe, type: aur }
+          - dsniff
+  roles:
+    - ../ansible-role-git

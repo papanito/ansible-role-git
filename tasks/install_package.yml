@@ -1,0 +1,25 @@
+- name: Install package with non-default package manager
+  block:
+  - name: Set variables for specific packages
+    set_fact:
+      package_name: "{{ package.name }}"
+      package_type: "{{ package.type }}"
+  - name: Install aur package {{ package_name }}
+    block:
+      - aur: # noqa 502
+          name: "{{ package_name }}"
+          state: latest
+    when: package_type == "aur"
+  when: package.name is defined
+  ignore_errors: true
+- name: Install default using package manager
+  block:
+  - name: Set variables for default packages
+    set_fact:
+      package_name: "{{ package }}"
+      package_type: "default"
+  - name: Install package {{ package_name }} using package manager
+    package: name={{ package_name }} state=latest # noqa 403
+    become: true
+  when: package.name is not defined
+  ignore_errors: true
