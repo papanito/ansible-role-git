@@ -1,6 +1,6 @@
 # Ansbile role "papanito.git"  <!-- omit in toc -->
 
-[![Ansible Role](https://img.shields.io/ansible/role/50326)](https://galaxy.ansible.com/papanito/git) [![Ansible Quality Score](https://img.shields.io/ansible/quality/50326)](https://galaxy.ansible.com/papanito/git) [![Ansible Role](https://img.shields.io/ansible/role/d/50326)](https://galaxy.ansible.com/papanito/git) [![GitHub issues](https://img.shields.io/github/issues/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/pulls)
+[![Ansible Role](https://img.shields.io/ansible/role/52578)](https://galaxy.ansible.com/papanito/git) [![Ansible Quality Score](https://img.shields.io/ansible/quality/52578)](https://galaxy.ansible.com/papanito/git) [![Ansible Role](https://img.shields.io/ansible/role/d/52578)](https://galaxy.ansible.com/papanito/git) [![GitHub issues](https://img.shields.io/github/issues/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/pulls)
 
 - [Requirements](#requirements)
 - [Role Variables](#role-variables)
