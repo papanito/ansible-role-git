@@ -1,10 +1,10 @@
 - name: Set target directory
   set_fact:
-    target_dir: "{{ item.value.dest | default(default_workspace) }}/{{ item.key }}"
+    clone_target_dir: "{{ item.value.dest | default(default_workspace) }}/{{ item.key }}"
 - name: Clone repo {{ item.key }}
   git:
     repo: "{{ item.value.repo }}"
-    dest: "{{ target_dir }}"
+    dest: "{{ clone_target_dir }}"
     bare: "{{ item.value.bare | default(bare_default) | bool }}"
     clone: "{{ item.value.clone | default(clone_default) | bool }}"
     force: "{{ item.value.force | default(force_default) | bool }}"
