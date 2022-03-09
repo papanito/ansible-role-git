@@ -6,7 +6,7 @@
       package_type: "{{ package.type }}"
   - name: Install aur package {{ package_name }}
     block:
-      - aur: # noqa 502
+      - kewlfft.aur.aur: # noqa 502
           name: "{{ package_name }}"
           state: latest
     when: package_type == "aur"

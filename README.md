@@ -2,20 +2,11 @@
 
 [![Ansible Role](https://img.shields.io/ansible/role/52578)](https://galaxy.ansible.com/papanito/git) [![Ansible Quality Score](https://img.shields.io/ansible/quality/52578)](https://galaxy.ansible.com/papanito/git) [![Ansible Role](https://img.shields.io/ansible/role/d/52578)](https://galaxy.ansible.com/papanito/git) [![GitHub issues](https://img.shields.io/github/issues/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/papanito/ansible-role-git)](https://github.com/papanito/ansible-role-git/pulls)
 
-- [Requirements](#requirements)
-- [Role Variables](#role-variables)
-  - [General parameters](#general-parameters)
-    - [Parameters for `git_repos`](#parameters-for-git_repos)
-- [Dependencies](#dependencies)
-- [Example Playbook](#example-playbook)
-- [License](#license)
-- [Author Information](#author-information)
-
 This role is used for simplified git checkouts. The idea is to provide a list of git repos to clone to a common directory, which can be overridden.
 
 ## Requirements
 
-none
+[Ansible Collection 'kewlfft.aur'](https://github.com/kewlfft/ansible-aur)
 
 ## Role Variables
 
